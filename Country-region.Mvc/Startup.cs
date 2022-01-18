@@ -27,7 +27,7 @@ namespace Country_region.Mvc
         {
             services.AddControllersWithViews();
             services.AddMvc();
-            services.AddDbContext<AppDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+            services.AddDbContext<AppDbContext>(option => option.UseNpgsql(Configuration.GetConnectionString("DefaultConnectionString")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
